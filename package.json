@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {
-    "build": "webpack",
+    "build-web": "webpack",
+    "build-ssr": "webpack --config webpack.ssr.config.js",
     "start": "yarn run build && node webserver.js"
   },
   "dependencies": {
@@ -15,6 +16,7 @@
     "html-webpack-plugin": "^2.28.0",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
-    "webpack": "^2.3.3"
+    "webpack": "^2.3.3",
+    "webpack-node-externals": "^1.5.4"
   }
 }
