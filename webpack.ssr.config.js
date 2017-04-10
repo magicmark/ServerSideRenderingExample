@@ -13,6 +13,7 @@ module.exports = {
     module: {
         rules: [
             {
+                include: path.join(__dirname, 'assets'),
                 test: /\.jsx?$/,
                 use: 'babel-loader',
             }

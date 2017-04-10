@@ -1,8 +1,5 @@
 const path = require('path');
 
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const webpack = require('webpack');
-
 module.exports = {
     entry: './assets/jsx/index.jsx',
     output: {
@@ -12,6 +9,7 @@ module.exports = {
     module: {
         rules: [
             {
+                include: path.join(__dirname, 'assets'),
                 test: /\.jsx?$/,
                 use: 'babel-loader'
             }
@@ -20,10 +18,4 @@ module.exports = {
     resolve: {
         extensions: ['.js', '.jsx']
     },
-    plugins: [
-        new HtmlWebpackPlugin({
-            filename: 'index.html',
-            template: 'assets/index.html'
-        })
-    ]
 };

@@ -1,5 +1,5 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import { renderReact } from 'hypernova-react';
 import Sheep from './sheep';
 
-ReactDOM.render(<Sheep />, document.getElementById('root'));
+// All instances of 'Sheep' on the page will be hydrated by Hypernova with this
+renderReact('Sheep', Sheep);
